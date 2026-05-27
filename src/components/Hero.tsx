@@ -53,7 +53,7 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="text-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] mb-6 animate-[fade-up_0.8s_ease-out]">
+          <h1 className="text-display text-[2.75rem] leading-[0.95] sm:text-6xl md:text-7xl lg:text-8xl mb-6 animate-[fade-up_0.8s_ease-out]">
             FORMAMOS <span className="text-gradient-neon">TALENTO.</span>
             <br />
             CREAMOS <span className="text-gradient-neon">CAMPEONES.</span>
