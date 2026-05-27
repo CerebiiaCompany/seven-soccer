@@ -21,9 +21,9 @@ export function Contact() {
           {/* Info */}
           <div className="space-y-4">
             {[
-              { Icon: Phone, label: "Teléfono", value: "+591 700 00000" },
+              { Icon: Phone, label: "Teléfono", value: "+57 300 000 0000" },
               { Icon: Mail, label: "Email", value: "info@sevensoccerclub.com" },
-              { Icon: MapPin, label: "Sedes", value: "3 sedes deportivas · Bolivia" },
+              { Icon: MapPin, label: "Ubicación", value: "Cúcuta · Norte de Santander · Colombia" },
               { Icon: Clock, label: "Horarios", value: "Lun - Sáb · 15:00 - 20:00" },
             ].map(({ Icon, label, value }) => (
               <div key={label} className="glass rounded-2xl p-5 flex items-center gap-4 hover:border-primary/40 transition-colors">
