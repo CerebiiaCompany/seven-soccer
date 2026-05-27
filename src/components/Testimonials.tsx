@@ -42,7 +42,7 @@ export function Testimonials() {
                   <Star key={i} className="h-4 w-4 fill-primary text-primary" />
                 ))}
               </div>
-              <p key={i} className="text-xl md:text-2xl leading-relaxed mb-8 animate-[fade-up_0.5s_ease-out]">
+              <p key={i} className="text-base sm:text-xl md:text-2xl leading-relaxed mb-8 animate-[fade-up_0.5s_ease-out]">
                 "{t.quote}"
               </p>
               <div className="flex items-center justify-between">
