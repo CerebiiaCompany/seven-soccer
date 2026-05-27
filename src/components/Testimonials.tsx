@@ -34,7 +34,7 @@ export function Testimonials() {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <div className="relative glass-strong rounded-3xl p-8 md:p-12 shadow-card">
+          <div className="relative glass-strong rounded-3xl p-6 sm:p-8 md:p-12 shadow-card">
             <Quote className="absolute top-6 left-6 h-12 w-12 text-primary/20" />
             <div className="relative">
               <div className="flex gap-1 mb-6">
