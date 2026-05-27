@@ -68,7 +68,7 @@ export function Stats() {
       <div className="container mx-auto px-6 relative">
         <div className="text-center max-w-2xl mx-auto mb-20">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">// Logros</div>
-          <h2 className="text-display text-4xl md:text-6xl">
+          <h2 className="text-display text-3xl sm:text-4xl md:text-6xl">
             NÚMEROS QUE <span className="text-gradient-neon">HABLAN</span>
           </h2>
         </div>
