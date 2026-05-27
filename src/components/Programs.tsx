@@ -28,7 +28,7 @@ export function Programs() {
           {programs.map(({ Icon, title, age, desc }, i) => (
             <div
               key={title}
-              className={`group relative glass rounded-2xl p-7 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 ${
+              className={`group relative glass rounded-2xl p-5 sm:p-7 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 ${
                 i === 0 ? "lg:col-span-2 lg:row-span-1" : ""
               }`}
             >
