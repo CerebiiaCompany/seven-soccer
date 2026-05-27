@@ -41,7 +41,7 @@ export function Events() {
                     <span className="h-1 w-1 rounded-full bg-muted-foreground" />
                     <span className="text-xs uppercase tracking-wider text-muted-foreground">{e.tag}</span>
                   </div>
-                  <div className="text-display text-xl mb-1 truncate">{e.title}</div>
+                  <div className="text-display text-lg sm:text-xl mb-1 truncate">{e.title}</div>
                   <div className="flex items-center gap-1 text-sm text-muted-foreground">
                     <MapPin className="h-3.5 w-3.5" />
                     {e.location}
