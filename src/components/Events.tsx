@@ -31,9 +31,9 @@ export function Events() {
                 key={e.title}
                 className="group glass rounded-2xl p-4 sm:p-6 flex items-center gap-4 sm:gap-6 hover:border-primary/50 transition-all hover:-translate-x-1"
               >
-                <div className="flex-shrink-0 w-20 h-20 rounded-2xl bg-gradient-neon flex flex-col items-center justify-center shadow-glow-soft">
-                  <div className="text-display text-3xl text-primary-foreground leading-none">{d}</div>
-                  <div className="text-xs uppercase text-primary-foreground/80 tracking-wider mt-1">{m}</div>
+                <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-neon flex flex-col items-center justify-center shadow-glow-soft">
+                  <div className="text-display text-2xl sm:text-3xl text-primary-foreground leading-none">{d}</div>
+                  <div className="text-[10px] sm:text-xs uppercase text-primary-foreground/80 tracking-wider mt-1">{m}</div>
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
