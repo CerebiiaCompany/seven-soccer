@@ -47,7 +47,7 @@ export function About() {
 
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">// El Club</div>
-            <h2 className="text-display text-4xl md:text-6xl mb-6 leading-tight">
+            <h2 className="text-display text-3xl sm:text-4xl md:text-6xl mb-6 leading-tight">
               UN PROYECTO DE <span className="text-gradient-neon">FORMACIÓN INTEGRAL</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-5 leading-relaxed">
