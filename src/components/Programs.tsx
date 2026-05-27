@@ -15,7 +15,7 @@ export function Programs() {
       <div className="container mx-auto px-6 relative">
         <div className="max-w-3xl mb-16">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">// Programas</div>
-          <h2 className="text-display text-4xl md:text-6xl mb-4">
+          <h2 className="text-display text-3xl sm:text-4xl md:text-6xl mb-4">
             ENTRENA COMO UN <span className="text-gradient-neon">PROFESIONAL</span>
           </h2>
           <p className="text-muted-foreground text-lg">
