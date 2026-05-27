@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Youtube } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
