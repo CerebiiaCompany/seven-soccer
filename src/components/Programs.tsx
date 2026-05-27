@@ -10,7 +10,7 @@ const programs = [
 
 export function Programs() {
   return (
-    <section id="programs" className="relative py-32 bg-surface/40">
+    <section id="programs" className="relative py-20 md:py-32 bg-surface/40">
       <div className="absolute inset-0 grid-bg opacity-30" />
       <div className="container mx-auto px-6 relative">
         <div className="max-w-3xl mb-16">

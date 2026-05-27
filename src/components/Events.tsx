@@ -9,7 +9,7 @@ const events = [
 
 export function Events() {
   return (
-    <section id="events" className="relative py-32">
+    <section id="events" className="relative py-20 md:py-32">
       <div className="container mx-auto px-6">
         <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
           <div>

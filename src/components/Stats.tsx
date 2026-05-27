@@ -51,7 +51,7 @@ function Stat({ end, label, suffix = "+" }: { end: number; label: string; suffix
 
 export function Stats() {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-20 md:py-32 overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={pitchImg}

@@ -13,7 +13,7 @@ const posts = [
 
 export function InstagramFeed() {
   return (
-    <section className="relative py-32">
+    <section className="relative py-20 md:py-32">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-[1fr_2fr] gap-12 items-center">
           <div>

@@ -17,7 +17,7 @@ const timeline = [
 
 export function About() {
   return (
-    <section id="about" className="relative py-32 overflow-hidden">
+    <section id="about" className="relative py-20 md:py-32 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 h-px w-1/2 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
       <div className="container mx-auto px-6">

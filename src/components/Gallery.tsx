@@ -19,7 +19,7 @@ const items = [
 export function Gallery() {
   const [open, setOpen] = useState<string | null>(null);
   return (
-    <section id="gallery" className="relative py-32 bg-surface/40">
+    <section id="gallery" className="relative py-20 md:py-32 bg-surface/40">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">// Galería</div>

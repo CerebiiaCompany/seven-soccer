@@ -3,7 +3,7 @@ import bgImg from "@/assets/celebration.jpg";
 
 export function Highlights() {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-20 md:py-32 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="relative rounded-3xl overflow-hidden border border-primary/20 group">
           <img

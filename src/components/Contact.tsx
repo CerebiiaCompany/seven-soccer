@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin, MessageCircle, Send, Clock } from "lucide-react";
 
 export function Contact() {
   return (
-    <section id="contact" className="relative py-32 overflow-hidden">
+    <section id="contact" className="relative py-20 md:py-32 overflow-hidden">
       <div className="absolute top-0 left-1/4 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute bottom-0 right-1/4 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
 

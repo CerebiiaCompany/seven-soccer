@@ -23,7 +23,7 @@ export function Testimonials() {
   const [i, setI] = useState(0);
   const t = items[i];
   return (
-    <section className="relative py-32 bg-surface/40 overflow-hidden">
+    <section className="relative py-20 md:py-32 bg-surface/40 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-20" />
       <div className="container mx-auto px-6 relative">
         <div className="text-center max-w-2xl mx-auto mb-14">
