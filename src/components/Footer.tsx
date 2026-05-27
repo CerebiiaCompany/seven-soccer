@@ -7,9 +7,10 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-10 mb-14">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="h-10 w-10 rounded-lg bg-gradient-neon flex items-center justify-center text-primary-foreground font-display text-xl shadow-glow-soft">
-                7
+            <div className="flex items-center gap-3 mb-4">
+              <div className="relative h-12 w-12 flex items-center justify-center">
+                <div className="absolute inset-0 rounded-full bg-primary/30 blur-xl" />
+                <img src={logo} alt="Seven Soccer Club" className="relative h-12 w-12 object-contain drop-shadow-[0_0_10px_oklch(0.82_0.24_142/0.5)]" />
               </div>
               <span className="text-display text-xl tracking-wider">
                 SEVEN <span className="text-gradient-neon">SOCCER CLUB</span>
