@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import heroImg from "@/assets/hero-soccer.jpg";
+import logo from "@/assets/logo.png";
 import { Instagram, Facebook, Youtube, ArrowRight } from "lucide-react";
 
 function Counter({ end, suffix = "+", duration = 2000 }: { end: number; suffix?: string; duration?: number }) {
