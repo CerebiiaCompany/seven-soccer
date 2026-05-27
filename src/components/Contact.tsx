@@ -9,7 +9,7 @@ export function Contact() {
       <div className="container mx-auto px-6 relative">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">// Contacto</div>
-          <h2 className="text-display text-4xl md:text-6xl">
+          <h2 className="text-display text-3xl sm:text-4xl md:text-6xl">
             ÚNETE AL <span className="text-gradient-neon">CLUB</span>
           </h2>
           <p className="text-muted-foreground mt-4">
