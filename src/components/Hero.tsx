@@ -101,10 +101,17 @@ export function Hero() {
         <div className="hidden lg:block relative">
           <div className="absolute -inset-4 bg-gradient-neon opacity-20 blur-3xl rounded-3xl" />
           <div className="relative glass-strong rounded-3xl p-8 shadow-card">
-            <div className="text-display text-7xl text-gradient-neon leading-none">7</div>
-            <div className="mt-2 text-display text-2xl">SEVEN SOCCER CLUB</div>
-            <div className="mt-1 text-sm text-muted-foreground uppercase tracking-wider">
-              Desde 2023 · Bolivia
+            <div className="relative flex justify-center mb-2">
+              <div className="absolute inset-0 m-auto h-40 w-40 rounded-full bg-primary/40 blur-3xl" />
+              <img
+                src={logo}
+                alt="Escudo Seven Soccer Club"
+                className="relative h-48 w-48 object-contain drop-shadow-[0_0_25px_oklch(0.82_0.24_142/0.55)]"
+              />
+            </div>
+            <div className="mt-2 text-display text-2xl text-center">SEVEN SOCCER CLUB</div>
+            <div className="mt-1 text-sm text-muted-foreground uppercase tracking-wider text-center">
+              Desde 2023 · Cúcuta, Colombia
             </div>
             <div className="mt-6 border-t border-border/50 pt-6 space-y-3">
               {[
