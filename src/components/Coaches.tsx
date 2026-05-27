@@ -15,7 +15,7 @@ export function Coaches() {
         <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">// Staff</div>
-            <h2 className="text-display text-4xl md:text-6xl">
+            <h2 className="text-display text-3xl sm:text-4xl md:text-6xl">
               CUERPO <span className="text-gradient-neon">TÉCNICO</span>
             </h2>
           </div>
