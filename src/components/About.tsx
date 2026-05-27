@@ -34,9 +34,9 @@ export function About() {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <div className="text-display text-4xl text-gradient-neon">UNIDOS</div>
-                <div className="text-display text-4xl">SOMOS MÁS FUERTES</div>
+              <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
+                <div className="text-display text-3xl sm:text-4xl text-gradient-neon">UNIDOS</div>
+                <div className="text-display text-3xl sm:text-4xl">SOMOS MÁS FUERTES</div>
               </div>
             </div>
             <div className="absolute -bottom-6 -right-6 glass-strong rounded-2xl p-5 shadow-card hidden md:block">
