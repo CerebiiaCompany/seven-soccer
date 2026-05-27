@@ -38,7 +38,7 @@ function Stat({ end, label, suffix = "+" }: { end: number; label: string; suffix
   }, [seen, end]);
   return (
     <div ref={ref} className="text-center">
-      <div className="text-display text-6xl md:text-7xl lg:text-8xl text-gradient-neon leading-none">
+      <div className="text-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-gradient-neon leading-none">
         {n}
         {suffix}
       </div>
