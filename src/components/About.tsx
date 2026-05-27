@@ -17,11 +17,11 @@ const timeline = [
 
 export function About() {
   return (
-    <section id="about" className="relative py-32 overflow-hidden">
+    <section id="about" className="relative py-20 md:py-32 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 h-px w-1/2 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-20 lg:mb-24">
           <div className="relative">
             <div className="absolute -inset-2 bg-gradient-neon opacity-20 blur-2xl rounded-3xl" />
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-primary/20">
@@ -34,9 +34,9 @@ export function About() {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <div className="text-display text-4xl text-gradient-neon">UNIDOS</div>
-                <div className="text-display text-4xl">SOMOS MÁS FUERTES</div>
+              <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
+                <div className="text-display text-3xl sm:text-4xl text-gradient-neon">UNIDOS</div>
+                <div className="text-display text-3xl sm:text-4xl">SOMOS MÁS FUERTES</div>
               </div>
             </div>
             <div className="absolute -bottom-6 -right-6 glass-strong rounded-2xl p-5 shadow-card hidden md:block">
@@ -47,7 +47,7 @@ export function About() {
 
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">// El Club</div>
-            <h2 className="text-display text-4xl md:text-6xl mb-6 leading-tight">
+            <h2 className="text-display text-3xl sm:text-4xl md:text-6xl mb-6 leading-tight">
               UN PROYECTO DE <span className="text-gradient-neon">FORMACIÓN INTEGRAL</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-5 leading-relaxed">

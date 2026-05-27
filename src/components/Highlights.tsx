@@ -3,7 +3,7 @@ import bgImg from "@/assets/celebration.jpg";
 
 export function Highlights() {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-20 md:py-32 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="relative rounded-3xl overflow-hidden border border-primary/20 group">
           <img
@@ -26,7 +26,7 @@ export function Highlights() {
             </button>
 
             <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">// Highlights</div>
-            <h2 className="text-display text-4xl md:text-7xl max-w-3xl leading-tight">
+            <h2 className="text-display text-3xl sm:text-4xl md:text-7xl max-w-3xl leading-tight px-2">
               VIVE LA PASIÓN DEL <span className="text-gradient-neon">SEVEN</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mt-4">

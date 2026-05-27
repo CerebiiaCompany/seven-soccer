@@ -19,11 +19,11 @@ const items = [
 export function Gallery() {
   const [open, setOpen] = useState<string | null>(null);
   return (
-    <section id="gallery" className="relative py-32 bg-surface/40">
+    <section id="gallery" className="relative py-20 md:py-32 bg-surface/40">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">// Galería</div>
-          <h2 className="text-display text-4xl md:text-6xl">
+          <h2 className="text-display text-3xl sm:text-4xl md:text-6xl">
             MOMENTOS DEL <span className="text-gradient-neon">CLUB</span>
           </h2>
         </div>

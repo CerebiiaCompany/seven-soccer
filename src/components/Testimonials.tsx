@@ -23,18 +23,18 @@ export function Testimonials() {
   const [i, setI] = useState(0);
   const t = items[i];
   return (
-    <section className="relative py-32 bg-surface/40 overflow-hidden">
+    <section className="relative py-20 md:py-32 bg-surface/40 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-20" />
       <div className="container mx-auto px-6 relative">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">// Voces</div>
-          <h2 className="text-display text-4xl md:text-6xl">
+          <h2 className="text-display text-3xl sm:text-4xl md:text-6xl">
             LO QUE DICE LA <span className="text-gradient-neon">FAMILIA SEVEN</span>
           </h2>
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <div className="relative glass-strong rounded-3xl p-8 md:p-12 shadow-card">
+          <div className="relative glass-strong rounded-3xl p-6 sm:p-8 md:p-12 shadow-card">
             <Quote className="absolute top-6 left-6 h-12 w-12 text-primary/20" />
             <div className="relative">
               <div className="flex gap-1 mb-6">
@@ -42,7 +42,7 @@ export function Testimonials() {
                   <Star key={i} className="h-4 w-4 fill-primary text-primary" />
                 ))}
               </div>
-              <p key={i} className="text-xl md:text-2xl leading-relaxed mb-8 animate-[fade-up_0.5s_ease-out]">
+              <p key={i} className="text-base sm:text-xl md:text-2xl leading-relaxed mb-8 animate-[fade-up_0.5s_ease-out]">
                 "{t.quote}"
               </p>
               <div className="flex items-center justify-between">

@@ -10,12 +10,12 @@ const coaches = [
 
 export function Coaches() {
   return (
-    <section id="coaches" className="relative py-32">
+    <section id="coaches" className="relative py-20 md:py-32">
       <div className="container mx-auto px-6">
         <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">// Staff</div>
-            <h2 className="text-display text-4xl md:text-6xl">
+            <h2 className="text-display text-3xl sm:text-4xl md:text-6xl">
               CUERPO <span className="text-gradient-neon">TÉCNICO</span>
             </h2>
           </div>

@@ -10,12 +10,12 @@ const programs = [
 
 export function Programs() {
   return (
-    <section id="programs" className="relative py-32 bg-surface/40">
+    <section id="programs" className="relative py-20 md:py-32 bg-surface/40">
       <div className="absolute inset-0 grid-bg opacity-30" />
       <div className="container mx-auto px-6 relative">
         <div className="max-w-3xl mb-16">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">// Programas</div>
-          <h2 className="text-display text-4xl md:text-6xl mb-4">
+          <h2 className="text-display text-3xl sm:text-4xl md:text-6xl mb-4">
             ENTRENA COMO UN <span className="text-gradient-neon">PROFESIONAL</span>
           </h2>
           <p className="text-muted-foreground text-lg">
@@ -28,7 +28,7 @@ export function Programs() {
           {programs.map(({ Icon, title, age, desc }, i) => (
             <div
               key={title}
-              className={`group relative glass rounded-2xl p-7 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 ${
+              className={`group relative glass rounded-2xl p-5 sm:p-7 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 ${
                 i === 0 ? "lg:col-span-2 lg:row-span-1" : ""
               }`}
             >

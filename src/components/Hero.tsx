@@ -16,7 +16,7 @@ function Counter({ end, suffix = "+", duration = 2000 }: { end: number; suffix?:
     return () => cancelAnimationFrame(raf);
   }, [end, duration]);
   return (
-    <span className="text-display text-4xl md:text-5xl text-gradient-neon">
+    <span className="text-display text-3xl md:text-5xl text-gradient-neon">
       {suffix}
       {n}
     </span>
@@ -53,7 +53,7 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="text-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] mb-6 animate-[fade-up_0.8s_ease-out]">
+          <h1 className="text-display text-[2.75rem] leading-[0.95] sm:text-6xl md:text-7xl lg:text-8xl mb-6 animate-[fade-up_0.8s_ease-out]">
             FORMAMOS <span className="text-gradient-neon">TALENTO.</span>
             <br />
             CREAMOS <span className="text-gradient-neon">CAMPEONES.</span>
@@ -123,7 +123,7 @@ export function Hero() {
       </div>
 
       {/* Floating social icons */}
-      <div className="absolute right-6 bottom-6 md:right-8 md:top-1/2 md:-translate-y-1/2 md:bottom-auto flex md:flex-col gap-3 z-20">
+      <div className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 flex-col gap-3 z-20">
         {[
           { Icon: Instagram, href: "https://www.instagram.com/seven.soccerclub/" },
           { Icon: Facebook, href: "#" },

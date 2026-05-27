@@ -2,14 +2,14 @@ import { Phone, Mail, MapPin, MessageCircle, Send, Clock } from "lucide-react";
 
 export function Contact() {
   return (
-    <section id="contact" className="relative py-32 overflow-hidden">
+    <section id="contact" className="relative py-20 md:py-32 overflow-hidden">
       <div className="absolute top-0 left-1/4 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute bottom-0 right-1/4 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
 
       <div className="container mx-auto px-6 relative">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">// Contacto</div>
-          <h2 className="text-display text-4xl md:text-6xl">
+          <h2 className="text-display text-3xl sm:text-4xl md:text-6xl">
             ÚNETE AL <span className="text-gradient-neon">CLUB</span>
           </h2>
           <p className="text-muted-foreground mt-4">
@@ -57,7 +57,7 @@ export function Contact() {
           {/* Form */}
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="glass-strong rounded-3xl p-7 md:p-10 shadow-card space-y-5"
+            className="glass-strong rounded-3xl p-5 sm:p-7 md:p-10 shadow-card space-y-5"
           >
             <div className="grid md:grid-cols-2 gap-5">
               <Field label="Nombre del jugador" placeholder="Ej. Mateo Pérez" />

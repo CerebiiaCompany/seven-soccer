@@ -38,7 +38,7 @@ function Stat({ end, label, suffix = "+" }: { end: number; label: string; suffix
   }, [seen, end]);
   return (
     <div ref={ref} className="text-center">
-      <div className="text-display text-6xl md:text-7xl lg:text-8xl text-gradient-neon leading-none">
+      <div className="text-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-gradient-neon leading-none">
         {n}
         {suffix}
       </div>
@@ -51,7 +51,7 @@ function Stat({ end, label, suffix = "+" }: { end: number; label: string; suffix
 
 export function Stats() {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-20 md:py-32 overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={pitchImg}
@@ -68,7 +68,7 @@ export function Stats() {
       <div className="container mx-auto px-6 relative">
         <div className="text-center max-w-2xl mx-auto mb-20">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">// Logros</div>
-          <h2 className="text-display text-4xl md:text-6xl">
+          <h2 className="text-display text-3xl sm:text-4xl md:text-6xl">
             NÚMEROS QUE <span className="text-gradient-neon">HABLAN</span>
           </h2>
         </div>
