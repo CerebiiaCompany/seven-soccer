@@ -29,7 +29,7 @@ export function Events() {
             return (
               <div
                 key={e.title}
-                className="group glass rounded-2xl p-6 flex items-center gap-6 hover:border-primary/50 transition-all hover:-translate-x-1"
+                className="group glass rounded-2xl p-4 sm:p-6 flex items-center gap-4 sm:gap-6 hover:border-primary/50 transition-all hover:-translate-x-1"
               >
                 <div className="flex-shrink-0 w-20 h-20 rounded-2xl bg-gradient-neon flex flex-col items-center justify-center shadow-glow-soft">
                   <div className="text-display text-3xl text-primary-foreground leading-none">{d}</div>
