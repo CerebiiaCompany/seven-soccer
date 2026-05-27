@@ -21,7 +21,7 @@ export function About() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 h-px w-1/2 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-20 lg:mb-24">
           <div className="relative">
             <div className="absolute -inset-2 bg-gradient-neon opacity-20 blur-2xl rounded-3xl" />
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-primary/20">
