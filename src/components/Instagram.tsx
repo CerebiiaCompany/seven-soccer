@@ -15,7 +15,7 @@ export function InstagramFeed() {
   return (
     <section className="relative py-20 md:py-32">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-[1fr_2fr] gap-12 items-center">
+        <div className="grid lg:grid-cols-[1fr_2fr] gap-10 lg:gap-12 items-center">
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">// Social</div>
             <h2 className="text-display text-4xl md:text-5xl mb-6">
