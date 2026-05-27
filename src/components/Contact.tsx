@@ -57,7 +57,7 @@ export function Contact() {
           {/* Form */}
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="glass-strong rounded-3xl p-7 md:p-10 shadow-card space-y-5"
+            className="glass-strong rounded-3xl p-5 sm:p-7 md:p-10 shadow-card space-y-5"
           >
             <div className="grid md:grid-cols-2 gap-5">
               <Field label="Nombre del jugador" placeholder="Ej. Mateo Pérez" />
