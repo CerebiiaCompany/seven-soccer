@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logo from "@/assets/logo.png";
 
 const links = [
   { href: "#about", label: "Club" },
@@ -27,11 +28,12 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 group">
-          <div className="relative h-9 w-9 rounded-lg bg-gradient-neon shadow-glow-soft flex items-center justify-center text-primary-foreground font-display text-xl">
-            7
+        <a href="#top" className="flex items-center gap-3 group">
+          <div className="relative h-11 w-11 flex items-center justify-center">
+            <div className="absolute inset-0 rounded-full bg-primary/30 blur-xl group-hover:bg-primary/50 transition-colors" />
+            <img src={logo} alt="Seven Soccer Club" className="relative h-11 w-11 object-contain drop-shadow-[0_0_8px_oklch(0.82_0.24_142/0.5)]" />
           </div>
-          <span className="text-display text-xl tracking-wider">
+          <span className="text-display text-xl tracking-wider hidden sm:block">
             SEVEN <span className="text-gradient-neon">SOCCER</span>
           </span>
         </a>
