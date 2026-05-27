@@ -16,7 +16,7 @@ function Counter({ end, suffix = "+", duration = 2000 }: { end: number; suffix?:
     return () => cancelAnimationFrame(raf);
   }, [end, duration]);
   return (
-    <span className="text-display text-4xl md:text-5xl text-gradient-neon">
+    <span className="text-display text-3xl md:text-5xl text-gradient-neon">
       {suffix}
       {n}
     </span>
