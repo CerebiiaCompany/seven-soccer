@@ -11,16 +11,15 @@ import g9 from "@/assets/photos/kick-shot.jpg";
 import g10 from "@/assets/photos/training-group.jpg";
 
 const items = [
-  { src: g1, alt: "Entrenamiento nocturno", span: "md:col-span-2 md:row-span-2" },
+  { src: g1, alt: "Entrenamiento nocturno", span: "col-span-2 md:row-span-2" },
   { src: g9, alt: "Remate de potencia", span: "md:row-span-2" },
-  
   { src: g3, alt: "Huddle de equipo" },
   { src: g4, alt: "Formación desde pequeños" },
   { src: g10, alt: "Sesión de entrenamiento", span: "md:col-span-2" },
   { src: g5, alt: "Entrenamiento colectivo", span: "md:col-span-2" },
   { src: g6, alt: "Preparación física" },
   { src: g7, alt: "Alto rendimiento" },
-  { src: g8, alt: "Acción de partido" },
+  { src: g8, alt: "Acción de partido", span: "md:col-span-2" },
 ];
 
 export function Gallery() {
