@@ -60,27 +60,38 @@ export function InstagramFeed() {
             </a>
           </div>
 
-          <div ref={containerRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div ref={containerRef} className="grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-6">
             {POSTS.map((url, i) => (
-              <blockquote
+              <div
                 key={`${url}-${i}`}
-                className="instagram-media"
-                data-instgrm-permalink={`${url}?utm_source=ig_embed&utm_campaign=loading`}
-                data-instgrm-version="14"
-                style={{
-                  background: "#FFF",
-                  border: 0,
-                  borderRadius: 12,
-                  boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
-                  margin: 0,
-                  maxWidth: 320,
-                  minWidth: 240,
-                  padding: 0,
-                  width: "100%",
-                }}
-              />
+                className="relative overflow-hidden rounded-xl bg-white shadow-glow-soft"
+                style={{ height: 300 }}
+              >
+                <blockquote
+                  className="instagram-media"
+                  data-instgrm-permalink={`${url}?utm_source=ig_embed&utm_campaign=loading`}
+                  data-instgrm-version="14"
+                  style={{
+                    background: "#FFF",
+                    border: 0,
+                    margin: 0,
+                    padding: 0,
+                    width: "100%",
+                    minWidth: 0,
+                    maxWidth: "100%",
+                  }}
+                />
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Ver publicación en Instagram"
+                  className="absolute inset-0"
+                />
+              </div>
             ))}
           </div>
+
         </div>
       </div>
     </section>
