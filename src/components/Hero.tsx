@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import heroImg from "@/assets/hero-soccer.jpg";
+import heroImg from "@/assets/photos/night-training.jpg";
 import logo from "@/assets/logo.png";
 import { Instagram, Facebook, Youtube, ArrowRight } from "lucide-react";
 

@@ -21,7 +21,7 @@ export function Contact() {
           {/* Info */}
           <div className="space-y-4">
             {[
-              { Icon: Phone, label: "Teléfono", value: "+57 300 000 0000" },
+              { Icon: Phone, label: "Teléfono", value: "+57 350 4734584" },
               { Icon: Mail, label: "Email", value: "info@sevensoccerclub.com" },
               { Icon: MapPin, label: "Ubicación", value: "Cúcuta · Norte de Santander · Colombia" },
               { Icon: Clock, label: "Horarios", value: "Lun - Sáb · 15:00 - 20:00" },
@@ -38,7 +38,7 @@ export function Contact() {
             ))}
 
             <a
-              href="https://wa.me/573000000000"
+              href="https://wa.me/573504734584"
               target="_blank"
               rel="noreferrer"
               className="glass rounded-2xl p-5 flex items-center gap-4 border border-primary/40 shadow-glow-soft hover:shadow-glow transition-shadow group"
