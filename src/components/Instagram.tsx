@@ -1,22 +1,44 @@
-import { Instagram as IG, Heart, MessageCircle } from "lucide-react";
-import g1 from "@/assets/hero-soccer.jpg";
-import g2 from "@/assets/player-action.jpg";
-import g3 from "@/assets/team-huddle.jpg";
-import g4 from "@/assets/celebration.jpg";
+import { Instagram as IG } from "lucide-react";
+import { useEffect, useRef } from "react";
 
-const posts = [
-  { img: g1, likes: 542, comments: 31, label: "Entrenamiento nocturno" },
-  { img: g2, likes: 731, comments: 48, label: "Técnica individual" },
-  { img: g3, likes: 893, comments: 67, label: "Equipo unido" },
-  { img: g4, likes: 1204, comments: 92, label: "GOOOOL!" },
+const POSTS = [
+  "https://www.instagram.com/p/Daf22qPx0J8/",
 ];
 
+declare global {
+  interface Window {
+    instgrm?: { Embeds: { process: () => void } };
+  }
+}
+
 export function InstagramFeed() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const SCRIPT_ID = "instagram-embed-script";
+    const process = () => window.instgrm?.Embeds.process();
+
+    if (window.instgrm) {
+      process();
+      return;
+    }
+    if (!document.getElementById(SCRIPT_ID)) {
+      const s = document.createElement("script");
+      s.id = SCRIPT_ID;
+      s.async = true;
+      s.src = "https://www.instagram.com/embed.js";
+      s.onload = process;
+      document.body.appendChild(s);
+    } else {
+      process();
+    }
+  }, []);
+
   return (
     <section className="relative py-20 md:py-32">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-[1fr_2fr] gap-10 lg:gap-12 items-center">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_2fr] gap-10 lg:gap-12 items-start">
+          <div className="lg:sticky lg:top-28">
             <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">// Social</div>
             <h2 className="text-display text-3xl sm:text-4xl md:text-5xl mb-6">
               SÍGUENOS Y VIVE LA <span className="text-gradient-neon">PASIÓN DEL FÚTBOL</span>
@@ -36,31 +58,25 @@ export function InstagramFeed() {
             </a>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {posts.map((p, i) => (
-              <a
-                key={i}
-                href="https://www.instagram.com/seven.soccerclub/"
-                target="_blank"
-                rel="noreferrer"
-                className="group relative aspect-square rounded-2xl overflow-hidden glass"
-              >
-                <img
-                  src={p.img}
-                  alt={p.label}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center text-sm gap-2">
-                  <div className="flex items-center gap-1">
-                    <Heart className="h-4 w-4 fill-primary text-primary" /> {p.likes}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <MessageCircle className="h-4 w-4 text-primary" /> {p.comments}
-                  </div>
-                </div>
-                <IG className="absolute top-3 right-3 h-4 w-4 text-white drop-shadow-lg" />
-              </a>
+          <div ref={containerRef} className="grid sm:grid-cols-2 gap-6">
+            {POSTS.map((url) => (
+              <blockquote
+                key={url}
+                className="instagram-media"
+                data-instgrm-permalink={`${url}?utm_source=ig_embed&utm_campaign=loading`}
+                data-instgrm-version="14"
+                style={{
+                  background: "#FFF",
+                  border: 0,
+                  borderRadius: 12,
+                  boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+                  margin: 0,
+                  maxWidth: 540,
+                  minWidth: 280,
+                  padding: 0,
+                  width: "100%",
+                }}
+              />
             ))}
           </div>
         </div>
