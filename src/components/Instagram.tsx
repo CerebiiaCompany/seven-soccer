@@ -3,6 +3,8 @@ import { useEffect, useRef } from "react";
 
 const POSTS = [
   "https://www.instagram.com/p/Daf22qPx0J8/",
+  "https://www.instagram.com/p/Daf22qPx0J8/",
+  "https://www.instagram.com/p/Daf22qPx0J8/",
 ];
 
 declare global {
@@ -58,10 +60,10 @@ export function InstagramFeed() {
             </a>
           </div>
 
-          <div ref={containerRef} className="grid sm:grid-cols-2 gap-6">
-            {POSTS.map((url) => (
+          <div ref={containerRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {POSTS.map((url, i) => (
               <blockquote
-                key={url}
+                key={`${url}-${i}`}
                 className="instagram-media"
                 data-instgrm-permalink={`${url}?utm_source=ig_embed&utm_campaign=loading`}
                 data-instgrm-version="14"
@@ -71,8 +73,8 @@ export function InstagramFeed() {
                   borderRadius: 12,
                   boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
                   margin: 0,
-                  maxWidth: 540,
-                  minWidth: 280,
+                  maxWidth: 320,
+                  minWidth: 240,
                   padding: 0,
                   width: "100%",
                 }}
