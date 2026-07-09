@@ -34,7 +34,7 @@ export function Gallery() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[220px] gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-dense auto-rows-[180px] md:auto-rows-[220px] gap-3">
           {items.map((it, i) => (
             <button
               key={i}
