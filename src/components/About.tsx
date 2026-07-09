@@ -1,5 +1,5 @@
 import { Trophy, Users, Target, Flame } from "lucide-react";
-import teamImg from "@/assets/team-huddle.jpg";
+import teamImg from "@/assets/photos/team-huddle-real.jpg";
 
 const values = [
   { Icon: Flame, title: "Disciplina", desc: "Compromiso diario con la mejora." },
