@@ -60,10 +60,10 @@ export function InstagramFeed() {
             </a>
           </div>
 
-          <div ref={containerRef} className="grid sm:grid-cols-2 gap-6">
-            {POSTS.map((url) => (
+          <div ref={containerRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {POSTS.map((url, i) => (
               <blockquote
-                key={url}
+                key={`${url}-${i}`}
                 className="instagram-media"
                 data-instgrm-permalink={`${url}?utm_source=ig_embed&utm_campaign=loading`}
                 data-instgrm-version="14"
