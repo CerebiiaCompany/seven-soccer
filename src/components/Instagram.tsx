@@ -3,6 +3,8 @@ import { useEffect, useRef } from "react";
 
 const POSTS = [
   "https://www.instagram.com/p/Daf22qPx0J8/",
+  "https://www.instagram.com/p/Daf22qPx0J8/",
+  "https://www.instagram.com/p/Daf22qPx0J8/",
 ];
 
 declare global {
