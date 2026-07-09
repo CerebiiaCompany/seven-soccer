@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import g1 from "@/assets/photos/night-training.jpg";
-import g2 from "@/assets/photos/dribble-kid.jpg";
+import g3 from "@/assets/photos/huddle-1.jpg";
 import g3 from "@/assets/photos/huddle-1.jpg";
 import g4 from "@/assets/photos/little-player.jpg";
 import g5 from "@/assets/photos/group-training.jpg";
