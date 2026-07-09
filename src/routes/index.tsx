@@ -8,6 +8,7 @@ import { Coaches } from "@/components/Coaches";
 import { Gallery } from "@/components/Gallery";
 import { Highlights } from "@/components/Highlights";
 import { Events } from "@/components/Events";
+import { Testimonials } from "@/components/Testimonials";
 import { Sponsors } from "@/components/Sponsors";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
