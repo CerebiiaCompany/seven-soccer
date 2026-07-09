@@ -61,7 +61,7 @@ export function Footer() {
             <div className="text-display text-lg mb-4">Contacto</div>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>info@sevensoccerclub.com</li>
-              <li>+57 300 000 0000</li>
+              <li>+57 350 4734584</li>
               <li>Cúcuta, Norte de Santander · Colombia</li>
               <li>Lun - Sáb · 15:00 - 20:00</li>
             </ul>

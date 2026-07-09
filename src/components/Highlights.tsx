@@ -1,5 +1,5 @@
 import { Play } from "lucide-react";
-import bgImg from "@/assets/celebration.jpg";
+import bgImg from "@/assets/photos/kick-action.jpg";
 
 export function Highlights() {
   return (

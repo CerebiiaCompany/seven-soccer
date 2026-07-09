@@ -1,19 +1,23 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import g1 from "@/assets/hero-soccer.jpg";
-import g2 from "@/assets/player-action.jpg";
-import g3 from "@/assets/team-huddle.jpg";
-import g4 from "@/assets/celebration.jpg";
-import g5 from "@/assets/coach-training.jpg";
-import g6 from "@/assets/cleats-ball.jpg";
+import g1 from "@/assets/photos/night-training.jpg";
+import g2 from "@/assets/photos/dribble-kid.jpg";
+import g3 from "@/assets/photos/huddle-1.jpg";
+import g4 from "@/assets/photos/little-player.jpg";
+import g5 from "@/assets/photos/group-training.jpg";
+import g6 from "@/assets/photos/gym-duo.jpg";
+import g7 from "@/assets/photos/gym-training.jpg";
+import g8 from "@/assets/photos/kick-action.jpg";
 
 const items = [
-  { src: g1, alt: "Entrenamiento bajo las luces", span: "md:col-span-2 md:row-span-2" },
+  { src: g1, alt: "Entrenamiento nocturno", span: "md:col-span-2 md:row-span-2" },
   { src: g2, alt: "Jugador dominando el balón", span: "md:row-span-2" },
   { src: g3, alt: "Huddle de equipo" },
-  { src: g4, alt: "Celebración del gol" },
-  { src: g5, alt: "Coach instruyendo" , span: "md:col-span-2" },
-  { src: g6, alt: "Botines y balón" },
+  { src: g4, alt: "Formación desde pequeños" },
+  { src: g5, alt: "Entrenamiento colectivo", span: "md:col-span-2" },
+  { src: g6, alt: "Preparación física" },
+  { src: g7, alt: "Alto rendimiento" },
+  { src: g8, alt: "Acción de partido" },
 ];
 
 export function Gallery() {
