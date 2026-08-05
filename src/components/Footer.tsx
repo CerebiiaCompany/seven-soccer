@@ -1,5 +1,36 @@
 import { Instagram, Facebook, Youtube } from "lucide-react";
+import { Link, useRouterState } from "@tanstack/react-router";
 import logo from "@/assets/logo.png";
+
+const navLinks = [
+  ["Club", "#about"],
+  ["Programas", "/programas"],
+  ["Coaches", "#coaches"],
+  ["Galería", "#gallery"],
+  ["Eventos", "#events"],
+  ["Contacto", "#contact"],
+];
+
+const isHash = (href: string) => href.startsWith("#");
+
+function FooterLink({ href, label }: { href: string; label: string }) {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const resolvedHref = isHash(href) && pathname !== "/" ? `/${href}` : href;
+
+  if (resolvedHref.startsWith("/") && !isHash(resolvedHref)) {
+    return (
+      <Link to={resolvedHref} className="hover:text-primary transition-colors">
+        {label}
+      </Link>
+    );
+  }
+
+  return (
+    <a href={resolvedHref} className="hover:text-primary transition-colors">
+      {label}
+    </a>
+  );
+}
 
 export function Footer() {
   return (
@@ -7,15 +38,19 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-10 mb-14">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
+            <Link to="/" className="flex items-center gap-3 mb-4 group">
               <div className="relative h-12 w-12 flex items-center justify-center">
                 <div className="absolute inset-0 rounded-full bg-primary/30 blur-xl" />
-                <img src={logo} alt="Seven Soccer Club" className="relative h-12 w-12 object-contain drop-shadow-[0_0_10px_oklch(0.82_0.24_142/0.5)]" />
+                <img
+                  src={logo}
+                  alt="Seven Soccer Club"
+                  className="relative h-12 w-12 object-contain drop-shadow-[0_0_10px_oklch(0.82_0.24_142/0.5)]"
+                />
               </div>
               <span className="text-display text-xl tracking-wider">
                 SEVEN <span className="text-gradient-neon">SOCCER CLUB</span>
               </span>
-            </div>
+            </Link>
             <p className="text-muted-foreground max-w-md text-sm leading-relaxed mb-6">
               Club deportivo profesional Partner Coerver Coaching. Formamos jugadores con
               habilidad en los duelos 1 vs 1 desde los 3 años.
@@ -42,16 +77,9 @@ export function Footer() {
           <div>
             <div className="text-display text-lg mb-4">Navegación</div>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              {[
-                ["Club", "#about"],
-                ["Programas", "/programas"],
-                ["Coaches", "#coaches"],
-                ["Galería", "#gallery"],
-                ["Eventos", "#events"],
-                ["Contacto", "#contact"],
-              ].map(([l, h]) => (
+              {navLinks.map(([l, h]) => (
                 <li key={l}>
-                  <a href={h} className="hover:text-primary transition-colors">{l}</a>
+                  <FooterLink href={h} label={l} />
                 </li>
               ))}
             </ul>
