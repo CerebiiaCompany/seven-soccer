@@ -1,12 +1,10 @@
-import { Baby, Zap, Crown, User, Trophy, ArrowUpRight } from "lucide-react";
+import { User, Trophy, ArrowUpRight } from "lucide-react";
 
 const programs = [
-  { Icon: Baby, title: "Formación Infantil", age: "3 - 8 años", desc: "Primeros pasos en el fútbol con foco en motricidad, juego y disfrute." },
-  { Icon: Zap, title: "Formación Juvenil", age: "9 - 13 años", desc: "Técnica individual avanzada bajo metodología Coerver Coaching." },
-  { Icon: Crown, title: "Alto Rendimiento", age: "Élite", desc: "Plan integral con neuro, gimnasio, fisio y psicología deportiva." },
-  { Icon: User, title: "Entrenamiento Personalizado", age: "1-on-1", desc: "Sesiones individuales para perfeccionar habilidades específicas." },
-  { Icon: Trophy, title: "Competencias y Torneos", age: "13 categorías", desc: "Competencia constante para acelerar el desarrollo del jugador." },
+  { Icon: User, title: "Entrenamiento Personalizado", age: "1-on-1", desc: "Sesiones individuales para perfeccionar habilidades específicas según el Plan Maestro de tu categoría." },
+  { Icon: Trophy, title: "Competencias y Torneos", age: "Sub 3 a Sub 14", desc: "Ligas, torneos locales, nacionales e internacionales según la fase de formación de cada categoría." },
 ];
+
 
 export function Programs() {
   return (
