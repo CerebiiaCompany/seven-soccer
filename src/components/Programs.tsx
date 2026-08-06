@@ -1,4 +1,5 @@
-import { User, Trophy, ArrowUpRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { User, Trophy, ArrowUpRight, Map } from "lucide-react";
 
 const programs = [
   { Icon: User, title: "Entrenamiento Personalizado", age: "1-on-1", desc: "Sesiones individuales para perfeccionar habilidades específicas según el Plan Maestro de tu categoría." },
@@ -21,6 +22,27 @@ export function Programs() {
             les permitan memorizar movimientos propios del juego.
           </p>
         </div>
+
+        <Link
+          to="/programas/plan-maestro"
+          className="group relative flex flex-col sm:flex-row sm:items-center justify-between gap-4 glass rounded-2xl p-6 sm:p-8 mb-10 overflow-hidden border-primary/20 hover:border-primary/50 transition-all duration-500 hover:-translate-y-1"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="relative flex items-start sm:items-center gap-4">
+            <div className="h-14 w-14 rounded-xl bg-gradient-neon flex items-center justify-center shadow-glow-soft shrink-0">
+              <Map className="h-7 w-7 text-primary-foreground" />
+            </div>
+            <div>
+              <h3 className="text-display text-xl sm:text-2xl mb-1">PLAN MAESTRO POR CATEGORÍA</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
+                Conoce la ruta completa de formación, programas Coerver y competencias de cada categoría.
+              </p>
+            </div>
+          </div>
+          <span className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-neon text-primary-foreground font-semibold text-sm uppercase tracking-wider shadow-glow-soft group-hover:shadow-glow transition-shadow shrink-0">
+            Ver plan completo <ArrowUpRight className="h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </span>
+        </Link>
 
         <div className="grid md:grid-cols-2 gap-5">
           {programs.map(({ Icon, title, age, desc }, i) => (
