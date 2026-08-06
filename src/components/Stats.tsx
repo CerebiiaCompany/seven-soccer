@@ -1,5 +1,12 @@
 import { useEffect, useRef, useState } from "react";
+import { MapPin } from "lucide-react";
 import pitchImg from "@/assets/pitch-aerial.jpg";
+
+const sedes = [
+  { name: "Sede Central", detail: "Cúcuta · Norte de Santander" },
+  { name: "Sede Norte", detail: "Cúcuta · Norte de Santander" },
+  { name: "Sede Sur", detail: "Cúcuta · Norte de Santander" },
+];
 
 function useInView<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);
@@ -78,6 +85,38 @@ export function Stats() {
           <Stat end={13} label="Categorías activas" />
           <Stat end={250} label="Jugadores activos" />
           <Stat end={40} label="Torneos nacionales" />
+        </div>
+
+        {/* Sedes */}
+        <div className="mt-16 md:mt-24">
+          <div className="text-center mb-8">
+            <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">// Sedes</div>
+            <h3 className="text-display text-2xl sm:text-3xl md:text-4xl">
+              3 SEDES EN <span className="text-gradient-neon">CÚCUTA</span>
+            </h3>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {sedes.map((s, i) => (
+              <div
+                key={s.name}
+                className="group relative glass rounded-2xl p-5 sm:p-6 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-1"
+              >
+                <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-primary/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute bottom-2 right-4 text-display text-5xl text-primary/5 leading-none">
+                  0{i + 1}
+                </div>
+                <div className="relative flex items-start gap-3">
+                  <div className="h-11 w-11 shrink-0 rounded-xl bg-gradient-neon flex items-center justify-center shadow-glow-soft">
+                    <MapPin className="h-5 w-5 text-primary-foreground" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-display text-lg sm:text-xl leading-snug">{s.name}</div>
+                    <p className="text-sm text-muted-foreground mt-1">{s.detail}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
