@@ -128,7 +128,14 @@ export function Navbar() {
       {open && (
         <div className="lg:hidden glass-strong mt-3 mx-6 rounded-xl p-6 space-y-4 max-h-[70vh] overflow-y-auto">
           {links.map((l) => (
-            <NavLink key={l.href} href={l.href} label={l.label} onClick={() => setOpen(false)} />
+            <div key={l.href}>
+              <NavLink
+                href={l.href}
+                label={l.label}
+                onClick={() => setOpen(false)}
+                className="block text-sm uppercase tracking-wider text-muted-foreground hover:text-primary transition-colors py-1"
+              />
+            </div>
           ))}
           <a
             href="https://wa.me/573504734584"
