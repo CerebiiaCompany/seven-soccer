@@ -1,4 +1,5 @@
-import { User, Trophy, ArrowUpRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { User, Trophy, ArrowUpRight, Map } from "lucide-react";
 
 const programs = [
   { Icon: User, title: "Entrenamiento Personalizado", age: "1-on-1", desc: "Sesiones individuales para perfeccionar habilidades específicas según el Plan Maestro de tu categoría." },
