@@ -24,9 +24,9 @@ const ProgramasIndexRoute = ProgramasIndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProgramasPlanMaestroRoute = ProgramasPlanMaestroRouteImport.update({
-  id: '/plan-maestro',
-  path: '/plan-maestro',
-  getParentRoute: () => ProgramasRoute,
+  id: '/programas/plan-maestro',
+  path: '/programas/plan-maestro',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -55,6 +55,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ProgramasPlanMaestroRoute: typeof ProgramasPlanMaestroRoute
   ProgramasIndexRoute: typeof ProgramasIndexRoute
 }
 
@@ -76,28 +77,19 @@ declare module '@tanstack/react-router' {
     }
     '/programas/plan-maestro': {
       id: '/programas/plan-maestro'
-      path: '/plan-maestro'
+      path: '/programas/plan-maestro'
       fullPath: '/programas/plan-maestro'
       preLoaderRoute: typeof ProgramasPlanMaestroRouteImport
-      parentRoute: typeof ProgramasRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ProgramasPlanMaestroRoute: ProgramasPlanMaestroRoute,
   ProgramasIndexRoute: ProgramasIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
