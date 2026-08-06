@@ -2,9 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import {
-  Baby,
-  Zap,
-  Crown,
   User,
   Trophy,
   ArrowUpRight,
@@ -19,53 +16,11 @@ import {
 
 const programs = [
   {
-    Icon: Baby,
-    title: "Formación Infantil",
-    age: "3 - 8 años",
-    schedule: "Lun · Mié · Vie",
-    desc: "Primeros pasos en el fútbol con foco en motricidad, juego y disfrute. Construimos bases sólidas de coordinación, equilibrio y amor por el balón.",
-    features: [
-      "Motricidad y coordinación",
-      "Juegos con balón adaptado",
-      "Trabajo en grupos reducidos",
-      "Valores deportivos desde el inicio",
-    ],
-    color: "from-primary/20 to-primary/5",
-  },
-  {
-    Icon: Zap,
-    title: "Formación Juvenil",
-    age: "9 - 13 años",
-    schedule: "Lun a Sáb",
-    desc: "Técnica individual avanzada bajo metodología Coerver Coaching. Perfeccionamos el dominio, el pase, la conducción y la toma de decisiones en duelos 1 vs 1.",
-    features: [
-      "Metodología Coerver Coaching",
-      "Duelos 1 vs 1 y 2 vs 2",
-      "Táctica por líneas",
-      "Competencia interna semanal",
-    ],
-    color: "from-neon/20 to-primary/5",
-  },
-  {
-    Icon: Crown,
-    title: "Alto Rendimiento",
-    age: "Élite",
-    schedule: "Plan personalizado",
-    desc: "Plan integral con neuro, gimnasio, fisio y psicología deportiva. Diseñado para jugadores que buscan explotar su potencial y competir al más alto nivel.",
-    features: [
-      "Entrenamiento neurocognitivo",
-      "Sesiones de gimnasio y fisio",
-      "Psicología deportiva",
-      "Análisis de video individual",
-    ],
-    color: "from-primary/25 to-neon/5",
-  },
-  {
     Icon: User,
     title: "Entrenamiento Personalizado",
     age: "1-on-1",
     schedule: "A convenir",
-    desc: "Sesiones individuales para perfeccionar habilidades específicas. Un coach exclusivo evalúa, planifica y ajusta cada entrenamiento a tus objetivos.",
+    desc: "Sesiones individuales para perfeccionar habilidades específicas, alineadas con la fase de formación del Plan Maestro que corresponde a tu categoría.",
     features: [
       "Diagnóstico técnico inicial",
       "Plan semanal a medida",
@@ -77,18 +32,19 @@ const programs = [
   {
     Icon: Trophy,
     title: "Competencias y Torneos",
-    age: "13 categorías",
+    age: "Sub 3 a Sub 14",
     schedule: "Temporada completa",
-    desc: "Competencia constante para acelerar el desarrollo del jugador. Participamos en ligas locales, regionales y eventos especiales durante todo el año.",
+    desc: "Competencia constante según el Plan Maestro: desde festivales de iniciación en Pre-Babys hasta ligas, torneos nacionales y giras internacionales en las categorías mayores.",
     features: [
-      "13 categorías activas",
-      "Ligas y copas locales",
-      "Torneos nacionales",
-      "Experiencia de competencia real",
+      "Torneos locales privados y de iniciación",
+      "Liga Norte y Torneo Nacional Difútbol",
+      "Torneos nacionales con viaje",
+      "Euro Soccer Tour Madrid / Pro Tour Brasil",
     ],
     color: "from-primary/20 to-neon/5",
   },
 ];
+
 
 const methodology = [
   {
@@ -200,10 +156,9 @@ function ProgramsPage() {
             {programs.map(({ Icon, title, age, schedule, desc, features, color }, i) => (
               <article
                 key={title}
-                className={`group relative glass rounded-3xl p-6 sm:p-8 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 ${
-                  i === 0 ? "lg:col-span-2" : ""
-                }`}
+                className="group relative glass rounded-3xl p-6 sm:p-8 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2"
               >
+
                 <div
                   className={`absolute -top-32 -right-32 h-64 w-64 rounded-full bg-gradient-to-br ${color} blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700`}
                 />
