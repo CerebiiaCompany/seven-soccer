@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ProgramasRouteImport } from './routes/programas'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProgramasPlanMaestroRouteImport } from './routes/programas.plan-maestro'
 
 const ProgramasRoute = ProgramasRouteImport.update({
   id: '/programas',
@@ -22,31 +23,39 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProgramasPlanMaestroRoute = ProgramasPlanMaestroRouteImport.update({
+  id: '/plan-maestro',
+  path: '/plan-maestro',
+  getParentRoute: () => ProgramasRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/programas': typeof ProgramasRoute
+  '/programas': typeof ProgramasRouteWithChildren
+  '/programas/plan-maestro': typeof ProgramasPlanMaestroRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/programas': typeof ProgramasRoute
+  '/programas': typeof ProgramasRouteWithChildren
+  '/programas/plan-maestro': typeof ProgramasPlanMaestroRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/programas': typeof ProgramasRoute
+  '/programas': typeof ProgramasRouteWithChildren
+  '/programas/plan-maestro': typeof ProgramasPlanMaestroRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/programas'
+  fullPaths: '/' | '/programas' | '/programas/plan-maestro'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/programas'
-  id: '__root__' | '/' | '/programas'
+  to: '/' | '/programas' | '/programas/plan-maestro'
+  id: '__root__' | '/' | '/programas' | '/programas/plan-maestro'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ProgramasRoute: typeof ProgramasRoute
+  ProgramasRoute: typeof ProgramasRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +74,31 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/programas/plan-maestro': {
+      id: '/programas/plan-maestro'
+      path: '/plan-maestro'
+      fullPath: '/programas/plan-maestro'
+      preLoaderRoute: typeof ProgramasPlanMaestroRouteImport
+      parentRoute: typeof ProgramasRoute
+    }
   }
 }
 
+interface ProgramasRouteChildren {
+  ProgramasPlanMaestroRoute: typeof ProgramasPlanMaestroRoute
+}
+
+const ProgramasRouteChildren: ProgramasRouteChildren = {
+  ProgramasPlanMaestroRoute: ProgramasPlanMaestroRoute,
+}
+
+const ProgramasRouteWithChildren = ProgramasRoute._addFileChildren(
+  ProgramasRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ProgramasRoute: ProgramasRoute,
+  ProgramasRoute: ProgramasRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

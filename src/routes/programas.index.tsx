@@ -107,7 +107,7 @@ const methodology = [
   },
 ];
 
-export const Route = createFileRoute("/programas")({
+export const Route = createFileRoute("/programas/")({
   head: () => ({
     meta: [
       { title: "Programas · Seven Soccer Club · Formamos Talento" },
