@@ -75,6 +75,15 @@ export function About() {
                 </div>
               ))}
             </div>
+
+            <Link
+              to="/estructura"
+              className="group mt-6 inline-flex items-center gap-2 text-sm uppercase tracking-wider text-primary hover:text-neon transition-colors"
+            >
+              Conoce nuestra estructura organizacional
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+
           </div>
         </div>
 
