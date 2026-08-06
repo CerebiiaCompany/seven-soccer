@@ -156,10 +156,9 @@ function ProgramsPage() {
             {programs.map(({ Icon, title, age, schedule, desc, features, color }, i) => (
               <article
                 key={title}
-                className={`group relative glass rounded-3xl p-6 sm:p-8 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 ${
-                  i === 0 ? "lg:col-span-2" : ""
-                }`}
+                className="group relative glass rounded-3xl p-6 sm:p-8 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2"
               >
+
                 <div
                   className={`absolute -top-32 -right-32 h-64 w-64 rounded-full bg-gradient-to-br ${color} blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700`}
                 />
