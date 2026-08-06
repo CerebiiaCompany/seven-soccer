@@ -12,7 +12,7 @@ const timeline = [
   { year: "2019", title: "Soccer Future Academy", desc: "Nace la academia enfocada en técnica individual." },
   { year: "2022", title: "Partner Coerver Academy", desc: "Respaldo internacional Coerver Coaching." },
   { year: "2023", title: "Seven Soccer Club", desc: "Creación del club competitivo. Partner Coerver Club." },
-  { year: "Hoy", title: "13 categorías activas", desc: "De 3 a 13 años, en 3 sedes deportivas." },
+  { year: "Hoy", title: "13 categorías activas", desc: "De 3 a 17 años, en 3 sedes deportivas." },
 ];
 
 export function About() {
