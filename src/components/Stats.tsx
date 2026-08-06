@@ -1,5 +1,12 @@
 import { useEffect, useRef, useState } from "react";
+import { MapPin } from "lucide-react";
 import pitchImg from "@/assets/pitch-aerial.jpg";
+
+const sedes = [
+  { name: "Sede Central", detail: "Cúcuta · Norte de Santander" },
+  { name: "Sede Norte", detail: "Cúcuta · Norte de Santander" },
+  { name: "Sede Sur", detail: "Cúcuta · Norte de Santander" },
+];
 
 function useInView<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);
@@ -112,9 +119,6 @@ export function Stats() {
           </div>
         </div>
       </div>
-    </section>
-  );
-}
     </section>
   );
 }
