@@ -80,12 +80,12 @@ export function Navbar() {
               className="relative h-11 w-11 object-contain drop-shadow-[0_0_8px_oklch(0.82_0.24_142/0.5)]"
             />
           </div>
-          <span className="text-display text-xl tracking-wider hidden sm:block">
+          <span className="text-display text-xl tracking-wider hidden sm:block whitespace-nowrap">
             SEVEN <span className="text-gradient-neon">SOCCER</span>
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           {links.map((l) => (
             <NavLink key={l.href} href={l.href} label={l.label} />
           ))}
@@ -95,14 +95,14 @@ export function Navbar() {
           href="https://wa.me/573504734584"
           target="_blank"
           rel="noreferrer"
-          className="hidden md:inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-neon text-primary-foreground font-semibold text-sm uppercase tracking-wider shadow-glow-soft hover:shadow-glow transition-shadow"
+          className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-neon text-primary-foreground font-semibold text-sm uppercase tracking-wider shadow-glow-soft hover:shadow-glow transition-shadow"
         >
           Únete
         </a>
 
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-foreground p-2"
+          className="lg:hidden text-foreground p-2"
           aria-label="Menu"
         >
           <div className="space-y-1.5">
@@ -126,7 +126,7 @@ export function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden glass-strong mt-3 mx-6 rounded-xl p-6 space-y-4">
+        <div className="lg:hidden glass-strong mt-3 mx-6 rounded-xl p-6 space-y-4 max-h-[70vh] overflow-y-auto">
           {links.map((l) => (
             <NavLink key={l.href} href={l.href} label={l.label} onClick={() => setOpen(false)} />
           ))}
