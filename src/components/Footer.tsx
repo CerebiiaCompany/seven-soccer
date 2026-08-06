@@ -98,7 +98,7 @@ export function Footer() {
 
         <div className="border-t border-border pt-8 flex flex-wrap items-center justify-between gap-4 text-xs text-muted-foreground uppercase tracking-wider">
           <div>© {new Date().getFullYear()} Seven Soccer Club · Todos los derechos reservados</div>
-          <div>Partner Coerver Coaching · Desde 2023</div>
+          <div>Partner Coerver Coaching · Desde 2019</div>
         </div>
       </div>
     </footer>

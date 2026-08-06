@@ -54,10 +54,12 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="text-display text-[2.75rem] leading-[0.95] sm:text-6xl md:text-7xl lg:text-8xl mb-6 animate-[fade-up_0.8s_ease-out]">
-            FORMAMOS <span className="text-gradient-neon">TALENTO.</span>
+          <h1 className="text-display text-[2.5rem] leading-[0.95] sm:text-5xl md:text-6xl lg:text-7xl mb-6 animate-[fade-up_0.8s_ease-out]">
+            Club de formación para{" "}
+            <span className="text-gradient-neon">Futbolistas</span>
             <br />
-            CREAMOS <span className="text-gradient-neon">CAMPEONES.</span>
+            con <span className="text-gradient-neon">Confianza</span> y{" "}
+            <span className="text-gradient-neon">Disciplina.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 animate-[fade-up_1s_ease-out]">
@@ -111,11 +113,11 @@ export function Hero() {
             </div>
             <div className="mt-2 text-display text-2xl text-center">SEVEN SOCCER CLUB</div>
             <div className="mt-1 text-sm text-muted-foreground uppercase tracking-wider text-center">
-              Desde 2023 · Cúcuta, Colombia
+              Desde 2019 · Cúcuta, Colombia
             </div>
             <div className="mt-6 border-t border-border/50 pt-6 space-y-3">
               {[
-                "13 categorías · 3 a 13 años",
+                "13 categorías · 3 a 17 años",
                 "Plan integral de formación",
                 "Neuroentrenamiento + Psicología",
                 "Partner Coerver Coaching",

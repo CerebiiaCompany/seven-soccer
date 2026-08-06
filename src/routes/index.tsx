@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Club deportivo profesional Partner Coerver Coaching. Formación, competencia y alto rendimiento para jugadores de 3 a 13 años en 3 sedes deportivas.",
+          "Club deportivo profesional Partner Coerver Coaching. Formación, competencia y alto rendimiento para jugadores de 3 a 17 años en 3 sedes deportivas.",
       },
       { property: "og:title", content: "Seven Soccer Club · Formamos Talento. Creamos Campeones." },
       {
