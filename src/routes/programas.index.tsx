@@ -168,6 +168,32 @@ function ProgramsPage() {
       <section className="relative py-20 md:py-32 bg-surface/40">
         <div className="absolute inset-0 grid-bg opacity-30" />
         <div className="container mx-auto px-6 relative">
+          <Link
+            to="/programas/plan-maestro"
+            className="group glass-strong rounded-3xl p-6 sm:p-8 mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-5 hover:border-primary/50 transition-all duration-300"
+          >
+            <div className="flex items-center gap-5">
+              <div className="h-14 w-14 rounded-2xl bg-gradient-neon flex items-center justify-center shadow-glow-soft flex-shrink-0">
+                <Map className="h-7 w-7 text-primary-foreground" />
+              </div>
+              <div>
+                <div className="text-xs uppercase tracking-[0.3em] text-primary mb-1">
+                  // Plan Maestro
+                </div>
+                <div className="text-display text-xl sm:text-2xl">
+                  Ver plan maestro completo por categoría
+                </div>
+                <p className="text-muted-foreground text-sm mt-1">
+                  Fase de formación, programas Coerver y competencias de cada categoría.
+                </p>
+              </div>
+            </div>
+            <span className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-neon text-primary-foreground font-bold uppercase tracking-wider text-xs sm:text-sm shadow-glow group-hover:scale-[1.02] transition-transform whitespace-nowrap">
+              Ver plan maestro
+              <ArrowUpRight className="h-4 w-4" />
+            </span>
+          </Link>
+
           <div className="grid lg:grid-cols-2 gap-6">
             {programs.map(({ Icon, title, age, schedule, desc, features, color }, i) => (
               <article
