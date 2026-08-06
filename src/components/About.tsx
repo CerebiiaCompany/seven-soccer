@@ -1,5 +1,7 @@
-import { Trophy, Users, Target, Flame } from "lucide-react";
+import { Trophy, Users, Target, Flame, ArrowRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import teamImg from "@/assets/photos/team-huddle-real.jpg";
+
 
 const values = [
   { Icon: Flame, title: "Disciplina", desc: "Compromiso diario con la mejora." },
