@@ -9,10 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as EstructuraRouteImport } from './routes/estructura'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgramasIndexRouteImport } from './routes/programas.index'
 import { Route as ProgramasPlanMaestroRouteImport } from './routes/programas.plan-maestro'
 
+const EstructuraRoute = EstructuraRouteImport.update({
+  id: '/estructura',
+  path: '/estructura',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,36 +37,52 @@ const ProgramasPlanMaestroRoute = ProgramasPlanMaestroRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/estructura': typeof EstructuraRoute
   '/programas/plan-maestro': typeof ProgramasPlanMaestroRoute
   '/programas/': typeof ProgramasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/estructura': typeof EstructuraRoute
   '/programas/plan-maestro': typeof ProgramasPlanMaestroRoute
   '/programas': typeof ProgramasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/estructura': typeof EstructuraRoute
   '/programas/plan-maestro': typeof ProgramasPlanMaestroRoute
   '/programas/': typeof ProgramasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/programas/plan-maestro' | '/programas/'
+  fullPaths: '/' | '/estructura' | '/programas/plan-maestro' | '/programas/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/programas/plan-maestro' | '/programas'
-  id: '__root__' | '/' | '/programas/plan-maestro' | '/programas/'
+  to: '/' | '/estructura' | '/programas/plan-maestro' | '/programas'
+  id:
+    | '__root__'
+    | '/'
+    | '/estructura'
+    | '/programas/plan-maestro'
+    | '/programas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  EstructuraRoute: typeof EstructuraRoute
   ProgramasPlanMaestroRoute: typeof ProgramasPlanMaestroRoute
   ProgramasIndexRoute: typeof ProgramasIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/estructura': {
+      id: '/estructura'
+      path: '/estructura'
+      fullPath: '/estructura'
+      preLoaderRoute: typeof EstructuraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,9 +109,20 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  EstructuraRoute: EstructuraRoute,
   ProgramasPlanMaestroRoute: ProgramasPlanMaestroRoute,
   ProgramasIndexRoute: ProgramasIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
