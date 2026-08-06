@@ -22,14 +22,13 @@ export function Programs() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 gap-5">
           {programs.map(({ Icon, title, age, desc }, i) => (
             <div
               key={title}
-              className={`group relative glass rounded-2xl p-5 sm:p-7 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 ${
-                i === 0 ? "lg:col-span-2 lg:row-span-1" : ""
-              }`}
+              className="group relative glass rounded-2xl p-5 sm:p-7 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2"
             >
+
               <div className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-primary/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
