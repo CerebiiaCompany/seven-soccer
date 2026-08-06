@@ -4,7 +4,9 @@ import logo from "@/assets/logo.png";
 
 const links = [
   { href: "#about", label: "Club" },
+  { href: "/estructura", label: "Estructura" },
   { href: "/programas", label: "Programas" },
+
   { href: "#coaches", label: "Coaches" },
   { href: "#gallery", label: "Galería" },
   { href: "#events", label: "Eventos" },

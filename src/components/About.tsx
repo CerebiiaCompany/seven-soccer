@@ -1,5 +1,7 @@
-import { Trophy, Users, Target, Flame } from "lucide-react";
+import { Trophy, Users, Target, Flame, ArrowRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import teamImg from "@/assets/photos/team-huddle-real.jpg";
+
 
 const values = [
   { Icon: Flame, title: "Disciplina", desc: "Compromiso diario con la mejora." },
@@ -73,6 +75,15 @@ export function About() {
                 </div>
               ))}
             </div>
+
+            <Link
+              to="/estructura"
+              className="group mt-6 inline-flex items-center gap-2 text-sm uppercase tracking-wider text-primary hover:text-neon transition-colors"
+            >
+              Conoce nuestra estructura organizacional
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+
           </div>
         </div>
 
