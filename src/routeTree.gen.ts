@@ -9,55 +9,58 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ProgramasRouteImport } from './routes/programas'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProgramasIndexRouteImport } from './routes/programas.index'
+import { Route as ProgramasPlanMaestroRouteImport } from './routes/programas.plan-maestro'
 
-const ProgramasRoute = ProgramasRouteImport.update({
-  id: '/programas',
-  path: '/programas',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProgramasIndexRoute = ProgramasIndexRouteImport.update({
+  id: '/programas/',
+  path: '/programas/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramasPlanMaestroRoute = ProgramasPlanMaestroRouteImport.update({
+  id: '/programas/plan-maestro',
+  path: '/programas/plan-maestro',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/programas': typeof ProgramasRoute
+  '/programas/plan-maestro': typeof ProgramasPlanMaestroRoute
+  '/programas/': typeof ProgramasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/programas': typeof ProgramasRoute
+  '/programas/plan-maestro': typeof ProgramasPlanMaestroRoute
+  '/programas': typeof ProgramasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/programas': typeof ProgramasRoute
+  '/programas/plan-maestro': typeof ProgramasPlanMaestroRoute
+  '/programas/': typeof ProgramasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/programas'
+  fullPaths: '/' | '/programas/plan-maestro' | '/programas/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/programas'
-  id: '__root__' | '/' | '/programas'
+  to: '/' | '/programas/plan-maestro' | '/programas'
+  id: '__root__' | '/' | '/programas/plan-maestro' | '/programas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ProgramasRoute: typeof ProgramasRoute
+  ProgramasPlanMaestroRoute: typeof ProgramasPlanMaestroRoute
+  ProgramasIndexRoute: typeof ProgramasIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/programas': {
-      id: '/programas'
-      path: '/programas'
-      fullPath: '/programas'
-      preLoaderRoute: typeof ProgramasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -65,12 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/programas/': {
+      id: '/programas/'
+      path: '/programas'
+      fullPath: '/programas/'
+      preLoaderRoute: typeof ProgramasIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programas/plan-maestro': {
+      id: '/programas/plan-maestro'
+      path: '/programas/plan-maestro'
+      fullPath: '/programas/plan-maestro'
+      preLoaderRoute: typeof ProgramasPlanMaestroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ProgramasRoute: ProgramasRoute,
+  ProgramasPlanMaestroRoute: ProgramasPlanMaestroRoute,
+  ProgramasIndexRoute: ProgramasIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
