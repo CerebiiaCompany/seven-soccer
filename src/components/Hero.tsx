@@ -108,7 +108,7 @@ export function Hero() {
               <img
                 src={logo}
                 alt="Escudo Seven Soccer Club"
-                className="relative h-48 w-48 object-contain drop-shadow-[0_0_25px_oklch(0.82_0.24_142/0.55)]"
+                className="relative h-48 w-48 object-contain drop-shadow-[0_0_25px_oklch(0.82_0.135_185/0.55)]"
               />
             </div>
             <div className="mt-2 text-display text-2xl text-center">SEVEN SOCCER CLUB</div>

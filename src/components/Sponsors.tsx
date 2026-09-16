@@ -37,7 +37,7 @@ export function Sponsors() {
                 src={s.src}
                 alt={`Logo ${s.name}`}
                 loading="lazy"
-                className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 drop-shadow-[0_0_14px_oklch(0.82_0.24_142/0.25)]"
+                className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 drop-shadow-[0_0_14px_oklch(0.82_0.135_185/0.25)]"
               />
             </div>
           ))}

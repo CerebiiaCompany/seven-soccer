@@ -77,7 +77,7 @@ export function Navbar() {
             <img
               src={logo}
               alt="Seven Soccer Club"
-              className="relative h-11 w-11 object-contain drop-shadow-[0_0_8px_oklch(0.82_0.24_142/0.5)]"
+              className="relative h-11 w-11 object-contain drop-shadow-[0_0_8px_oklch(0.82_0.135_185/0.5)]"
             />
           </div>
           <span className="text-display text-xl tracking-wider hidden sm:block whitespace-nowrap">
