@@ -26,7 +26,7 @@ function Counter({ end, suffix = "+", duration = 2000 }: { end: number; suffix?:
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-screen flex items-center overflow-hidden pt-24">
+    <section id="top" className="relative min-h-screen flex items-center overflow-hidden pt-36 md:pt-40">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
