@@ -71,16 +71,16 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="relative h-14 w-14 flex items-center justify-center">
+        <Link to="/" className="flex items-center gap-4 group">
+          <div className="relative h-24 w-24 flex items-center justify-center">
             <div className="absolute inset-0 rounded-full bg-primary/30 blur-xl group-hover:bg-primary/50 transition-colors" />
             <img
               src={logo}
               alt="Seven Soccer Club"
-              className="relative h-14 w-14 object-contain drop-shadow-[0_0_8px_oklch(0.82_0.135_185/0.5)]"
+              className="relative h-24 w-24 object-contain drop-shadow-[0_0_10px_oklch(0.82_0.135_185/0.5)]"
             />
           </div>
-          <span className="text-display text-2xl tracking-wider hidden sm:block whitespace-nowrap">
+          <span className="text-display text-4xl tracking-wider hidden sm:block whitespace-nowrap">
             SEVEN <span className="text-gradient-neon">SOCCER</span>
           </span>
         </Link>
