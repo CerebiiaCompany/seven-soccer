@@ -104,11 +104,11 @@ export function Hero() {
           <div className="absolute -inset-4 bg-gradient-neon opacity-20 blur-3xl rounded-3xl" />
           <div className="relative glass-strong rounded-3xl p-8 shadow-card">
             <div className="relative flex justify-center mb-2">
-              <div className="absolute inset-0 m-auto h-40 w-40 rounded-full bg-primary/40 blur-3xl" />
+              <div className="absolute inset-0 m-auto h-56 w-56 rounded-full bg-primary/40 blur-3xl" />
               <img
                 src={logo}
                 alt="Escudo Seven Soccer Club"
-                className="relative h-48 w-48 object-contain drop-shadow-[0_0_25px_oklch(0.82_0.135_185/0.55)]"
+                className="relative h-64 w-64 object-contain drop-shadow-[0_0_25px_oklch(0.82_0.135_185/0.55)]"
               />
             </div>
             <div className="mt-2 text-display text-2xl text-center">SEVEN SOCCER CLUB</div>
