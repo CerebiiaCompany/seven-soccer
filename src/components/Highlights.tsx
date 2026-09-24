@@ -23,7 +23,7 @@ export function Highlights() {
               <div className="relative w-full overflow-hidden rounded-2xl" style={{ aspectRatio: "16 / 9" }}>
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/Lzr4v8oxMbA?start=30&rel=0"
+                  src="https://www.youtube.com/embed/Lzr4v8oxMbA?start=1&rel=0"
                   title="Highlights Seven Soccer Club"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
