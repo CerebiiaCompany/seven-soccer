@@ -109,6 +109,13 @@
 }
 
 @layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
   .text-display { font-family: var(--font-display); letter-spacing: 0.02em; }
   .text-gradient-neon {
     background: var(--gradient-neon);
