@@ -1,13 +1,40 @@
 import { useRef, useState, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import coachImg from "@/assets/coach-training.jpg";
-import playerImg from "@/assets/player-action.jpg";
-import celebImg from "@/assets/celebration.jpg";
+
+import andelNieto from "@/assets/staff/andel-nieto.jpg";
+import camiloSerrano from "@/assets/staff/camilo-serrano.jpg";
+import cristianTorres from "@/assets/staff/cristian-torres.jpg";
+import gustavoAvila from "@/assets/staff/gustavo-avila.jpg";
+import gustavoPerico from "@/assets/staff/gustavo-perico.jpg";
+import harlemSilva from "@/assets/staff/harlem-silva.jpg";
+import julioCaicedo from "@/assets/staff/julio-caicedo.jpg";
+import maikonMartinez from "@/assets/staff/maikon-martinez.jpg";
+import victorGonzalez from "@/assets/staff/victor-gonzalez.jpg";
+import wilmerCardenas from "@/assets/staff/wilmer-cardenas.jpg";
+import andresAcevedo from "@/assets/staff/andres-acevedo.jpg";
+import danielGarcia from "@/assets/staff/daniel-garcia.jpg";
+import saraRojas from "@/assets/staff/sara-rojas.jpg";
+import marcelaFlorez from "@/assets/staff/marcela-florez.jpg";
+import paolaLopez from "@/assets/staff/paola-lopez.jpg";
+import shirlySilva from "@/assets/staff/shirly-silva.jpg";
 
 const coaches = [
-  { name: "Carlos Mendoza", role: "Director Técnico", years: "15+ años", specialty: "Alto Rendimiento", img: coachImg },
-  { name: "Andrés Rivera", role: "Coach Formación", years: "8 años", specialty: "Metodología Coerver", img: playerImg },
-  { name: "Diego Salazar", role: "Preparador Físico", years: "10 años", specialty: "Neuroentrenamiento", img: celebImg },
+  { name: "Andel Nieto", role: "Director General", img: andelNieto },
+  { name: "Camilo Serrano", role: "Entrenador", img: camiloSerrano },
+  { name: "Cristian Torres", role: "Entrenador", img: cristianTorres },
+  { name: "Gustavo Ávila", role: "Entrenador", img: gustavoAvila },
+  { name: "Gustavo Perico", role: "Entrenador", img: gustavoPerico },
+  { name: "Harlem Silva", role: "Entrenador", img: harlemSilva },
+  { name: "Julio Caicedo", role: "Entrenador", img: julioCaicedo },
+  { name: "Maikon Martínez", role: "Entrenador", img: maikonMartinez },
+  { name: "Victor González", role: "Entrenador", img: victorGonzalez },
+  { name: "Wilmer Cárdenas", role: "Entrenador", img: wilmerCardenas },
+  { name: "Andrés Acevedo", role: "Área de Rendimiento Físico", img: andresAcevedo },
+  { name: "Daniel García", role: "Psicología y Neuroentrenamiento", img: danielGarcia },
+  { name: "Sara Rojas", role: "Rehabilitación y Salud Deportiva", img: saraRojas },
+  { name: "Marcela Flórez", role: "Comunicaciones y Marketing", img: marcelaFlorez },
+  { name: "Paola López", role: "Área Administrativa", img: paolaLopez },
+  { name: "Shirly Silva", role: "Secretaria", img: shirlySilva },
 ];
 
 export function Coaches() {
@@ -49,8 +76,7 @@ export function Coaches() {
           </div>
           <div className="flex items-end justify-between gap-6 w-full lg:w-auto">
             <p className="text-muted-foreground max-w-md">
-              Profesionales certificados bajo metodología Coerver Coaching, comprometidos con el
-              desarrollo integral de cada jugador.
+              Profesionales comprometidos con la formación de futbolistas con confianza y disciplina.
             </p>
             <div className="hidden sm:flex gap-2 shrink-0">
               <button
@@ -81,28 +107,22 @@ export function Coaches() {
           {coaches.map((c) => (
             <article
               key={c.name}
-              className="group relative rounded-3xl overflow-hidden glass border border-border hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-soft snap-start shrink-0 w-[85%] sm:w-[55%] lg:w-[calc((100%-3rem)/3)]"
+              className="group relative rounded-3xl overflow-hidden glass border border-border hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-soft snap-start shrink-0 w-[75%] sm:w-[45%] lg:w-[calc((100%-4.5rem)/4)]"
             >
-              <div className="aspect-[3/4] relative overflow-hidden">
+              <div className="aspect-[4/5] relative overflow-hidden">
                 <img
                   src={c.img}
                   alt={`${c.name} - ${c.role}`}
                   loading="lazy"
-                  width={1024}
-                  height={1280}
+                  width={800}
+                  height={1000}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-                <div className="absolute top-4 right-4 glass px-3 py-1 rounded-full text-xs uppercase tracking-wider text-primary">
-                  {c.years}
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
               </div>
-              <div className="relative -mt-20 p-6 z-10">
+              <div className="relative -mt-16 p-5 z-10">
                 <div className="text-xs uppercase tracking-wider text-primary mb-1">{c.role}</div>
-                <div className="text-display text-2xl mb-2">{c.name}</div>
-                <div className="text-sm text-muted-foreground border-t border-border/50 pt-3 mt-3">
-                  Especialidad: <span className="text-foreground">{c.specialty}</span>
-                </div>
+                <div className="text-display text-xl sm:text-2xl">{c.name}</div>
               </div>
             </article>
           ))}
@@ -112,7 +132,7 @@ export function Coaches() {
           {coaches.map((_, idx) => (
             <button
               key={idx}
-              aria-label={`Ir al coach ${idx + 1}`}
+              aria-label={`Ir al integrante ${idx + 1}`}
               onClick={() => scrollToCard(idx)}
               className={`h-1.5 rounded-full transition-all ${
                 idx === active ? "w-8 bg-primary shadow-glow-soft" : "w-1.5 bg-muted-foreground/30"
