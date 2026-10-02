@@ -9,19 +9,19 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as EstructuraRouteImport } from './routes/estructura'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as EstructuraRouteImport } from './routes/estructura'
 import { Route as ProgramasIndexRouteImport } from './routes/programas.index'
 import { Route as ProgramasPlanMaestroRouteImport } from './routes/programas.plan-maestro'
 
-const EstructuraRoute = EstructuraRouteImport.update({
-  id: '/estructura',
-  path: '/estructura',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EstructuraRoute = EstructuraRouteImport.update({
+  id: '/estructura',
+  path: '/estructura',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProgramasIndexRoute = ProgramasIndexRouteImport.update({
@@ -60,11 +60,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to: '/' | '/estructura' | '/programas/plan-maestro' | '/programas'
   id:
-    | '__root__'
-    | '/'
-    | '/estructura'
-    | '/programas/plan-maestro'
-    | '/programas/'
+    '__root__' | '/' | '/estructura' | '/programas/plan-maestro' | '/programas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,18 +72,18 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/estructura': {
-      id: '/estructura'
-      path: '/estructura'
-      fullPath: '/estructura'
-      preLoaderRoute: typeof EstructuraRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/estructura': {
+      id: '/estructura'
+      path: '/estructura'
+      fullPath: '/estructura'
+      preLoaderRoute: typeof EstructuraRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/programas/': {
