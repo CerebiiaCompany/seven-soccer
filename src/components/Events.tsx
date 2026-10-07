@@ -23,31 +23,31 @@ export function Events() {
           </a>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {events.map((e) => {
             const [d, m] = e.date.split(" ");
             return (
               <div
                 key={e.title}
-                className="group glass rounded-2xl p-4 sm:p-6 flex items-center gap-4 sm:gap-6 hover:border-primary/50 transition-all hover:-translate-x-1"
+                className="group glass min-w-0 rounded-2xl p-4 sm:p-6 grid grid-cols-[auto_minmax(0,1fr)] sm:grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 sm:gap-6 hover:border-primary/50 transition-all hover:-translate-x-1"
               >
                 <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-neon flex flex-col items-center justify-center shadow-glow-soft">
                   <div className="text-display text-2xl sm:text-3xl text-primary-foreground leading-none">{d}</div>
                   <div className="text-[10px] sm:text-xs uppercase text-primary-foreground/80 tracking-wider mt-1">{m}</div>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
                     <span className="text-xs uppercase tracking-wider text-primary">{e.type}</span>
                     <span className="h-1 w-1 rounded-full bg-muted-foreground" />
                     <span className="text-xs uppercase tracking-wider text-muted-foreground">{e.tag}</span>
                   </div>
-                  <div className="text-display text-lg sm:text-xl mb-1 truncate">{e.title}</div>
+                  <div className="text-display text-lg sm:text-xl mb-1">{e.title}</div>
                   <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                    <MapPin className="h-3.5 w-3.5" />
+                    <MapPin className="h-3.5 w-3.5 shrink-0" />
                     {e.location}
                   </div>
                 </div>
-                <Calendar className="h-5 w-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                <Calendar className="hidden sm:block h-5 w-5 shrink-0 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
             );
           })}

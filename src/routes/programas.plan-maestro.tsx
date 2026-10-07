@@ -169,7 +169,7 @@ function PlanMaestroPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative flex items-center justify-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+      <section className="relative flex items-center justify-center pt-36 pb-16 md:pt-40 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute inset-0 grid-bg opacity-30" />
         <div className="absolute top-1/4 left-1/4 h-96 w-96 rounded-full bg-primary/20 blur-[120px]" />
