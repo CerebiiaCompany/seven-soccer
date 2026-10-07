@@ -70,8 +70,8 @@ export function Navbar() {
         scrolled ? "glass-strong py-3" : "py-5 bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 group">
+      <div className="container mx-auto px-6 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 xl:flex xl:justify-between">
+        <Link to="/" className="flex min-w-0 items-center gap-3 group">
           <div className="relative h-20 w-20 flex items-center justify-center shrink-0">
             <div className="absolute inset-0 rounded-full bg-primary/30 blur-xl group-hover:bg-primary/50 transition-colors" />
             <img
@@ -85,7 +85,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+        <nav className="hidden xl:flex shrink-0 items-center gap-6">
           {links.map((l) => (
             <NavLink key={l.href} href={l.href} label={l.label} />
           ))}
@@ -95,15 +95,17 @@ export function Navbar() {
           href="https://wa.me/573504734584"
           target="_blank"
           rel="noreferrer"
-          className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-neon text-primary-foreground font-semibold text-sm uppercase tracking-wider shadow-glow-soft hover:shadow-glow transition-shadow"
+          className="hidden xl:inline-flex shrink-0 items-center px-5 py-2.5 rounded-full bg-gradient-neon text-primary-foreground font-semibold text-sm uppercase tracking-wider shadow-glow-soft hover:shadow-glow transition-shadow"
         >
           Únete
         </a>
 
         <button
           onClick={() => setOpen(!open)}
-          className="lg:hidden text-foreground p-2"
+          className="xl:hidden shrink-0 text-foreground p-2"
           aria-label="Menu"
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           <div className="space-y-1.5">
             <span
@@ -126,7 +128,7 @@ export function Navbar() {
       </div>
 
       {open && (
-        <div className="lg:hidden glass-strong mt-3 mx-6 rounded-xl p-6 space-y-4 max-h-[70vh] overflow-y-auto">
+        <div id="mobile-navigation" className="xl:hidden glass-strong mt-3 mx-6 rounded-xl p-6 space-y-4 max-h-[calc(100dvh-144px)] overflow-y-auto">
           {links.map((l) => (
             <div key={l.href}>
               <NavLink

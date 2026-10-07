@@ -1,0 +1,3 @@
+- [x] Correct clipped contact cards and form on mobile.
+- [x] Check shared navigation and other pages at mobile/tablet widths.
+- [x] Verify the final layout and clear existing build errors.

@@ -93,7 +93,7 @@ function ProgramsPage() {
       <Navbar />
 
       {/* Hero interno */}
-      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
+      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center pt-36 md:pt-40 pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute inset-0 grid-bg opacity-30" />
         <div className="absolute top-1/4 left-1/4 h-96 w-96 rounded-full bg-primary/20 blur-[120px]" />

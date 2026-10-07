@@ -17,22 +17,22 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-[1fr_1.3fr] gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] gap-6">
           {/* Info */}
-          <div className="space-y-4">
+          <div className="min-w-0 space-y-4">
             {[
               { Icon: Phone, label: "Teléfono", value: "+57 350 4734584" },
               { Icon: Mail, label: "Email", value: "info@sevensoccerclub.com" },
               { Icon: MapPin, label: "Ubicación", value: "Cúcuta · Norte de Santander · Colombia" },
               { Icon: Clock, label: "Horarios", value: "Lun - Sáb · 15:00 - 20:00" },
             ].map(({ Icon, label, value }) => (
-              <div key={label} className="glass rounded-2xl p-5 flex items-center gap-4 hover:border-primary/40 transition-colors">
+              <div key={label} className="glass rounded-2xl p-4 sm:p-5 grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3 sm:gap-4 hover:border-primary/40 transition-colors">
                 <div className="h-12 w-12 rounded-xl bg-gradient-neon flex items-center justify-center shadow-glow-soft flex-shrink-0">
                   <Icon className="h-5 w-5 text-primary-foreground" />
                 </div>
                 <div className="min-w-0">
                   <div className="text-xs uppercase tracking-wider text-muted-foreground">{label}</div>
-                  <div className="text-foreground truncate">{value}</div>
+                  <div className="text-foreground text-sm sm:text-base leading-relaxed wrap-anywhere">{value}</div>
                 </div>
               </div>
             ))}
@@ -41,29 +41,29 @@ export function Contact() {
               href="https://wa.me/573504734584"
               target="_blank"
               rel="noreferrer"
-              className="glass rounded-2xl p-5 flex items-center gap-4 border border-primary/40 shadow-glow-soft hover:shadow-glow transition-shadow group"
+              className="glass rounded-2xl p-4 sm:p-5 grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 sm:gap-4 border border-primary/40 shadow-glow-soft hover:shadow-glow transition-shadow group"
             >
               <div className="h-12 w-12 rounded-xl bg-gradient-neon flex items-center justify-center animate-glow-pulse flex-shrink-0">
                 <MessageCircle className="h-5 w-5 text-primary-foreground" />
               </div>
-              <div className="flex-1">
+              <div className="min-w-0">
                 <div className="text-xs uppercase tracking-wider text-primary">WhatsApp directo</div>
                 <div className="text-display text-lg">Escríbenos ahora</div>
               </div>
-              <Send className="h-4 w-4 text-primary group-hover:translate-x-1 transition-transform" />
+              <Send className="h-4 w-4 shrink-0 text-primary group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
 
           {/* Form */}
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="glass-strong rounded-3xl p-5 sm:p-7 md:p-10 shadow-card space-y-5"
+            className="glass-strong min-w-0 w-full rounded-3xl p-5 sm:p-7 lg:p-8 xl:p-10 shadow-card space-y-5"
           >
-            <div className="grid md:grid-cols-2 gap-5">
+            <div className="grid min-w-0 grid-cols-1 md:grid-cols-2 gap-5">
               <Field label="Nombre del jugador" placeholder="Ej. Mateo Pérez" />
               <Field label="Edad" placeholder="Ej. 9" type="number" />
             </div>
-            <div className="grid md:grid-cols-2 gap-5">
+            <div className="grid min-w-0 grid-cols-1 md:grid-cols-2 gap-5">
               <Field label="Nombre del responsable" placeholder="Tu nombre completo" />
               <Field label="Teléfono" placeholder="+57 ..." />
             </div>
@@ -75,7 +75,7 @@ export function Contact() {
               <textarea
                 rows={4}
                 placeholder="Cuéntanos sobre el jugador y qué programa te interesa..."
-                className="w-full bg-input/50 border border-border rounded-xl px-4 py-3 text-sm placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:shadow-glow-soft transition-all resize-none"
+                className="min-w-0 max-w-full w-full bg-input/50 border border-border rounded-xl px-4 py-3 text-base placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:shadow-glow-soft transition-all resize-none"
               />
             </div>
             <button
@@ -94,13 +94,13 @@ export function Contact() {
 
 function Field({ label, ...props }: { label: string } & React.InputHTMLAttributes<HTMLInputElement>) {
   return (
-    <div>
+    <div className="min-w-0">
       <label className="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">
         {label}
       </label>
       <input
         {...props}
-        className="w-full bg-input/50 border border-border rounded-xl px-4 py-3 text-sm placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:shadow-glow-soft transition-all"
+        className="min-w-0 max-w-full w-full bg-input/50 border border-border rounded-xl px-4 py-3 text-base placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:shadow-glow-soft transition-all"
       />
     </div>
   );

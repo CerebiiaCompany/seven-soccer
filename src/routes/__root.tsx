@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
@@ -32,7 +33,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
 
@@ -72,18 +73,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
+      { title: "Seven Soccer Club · Cúcuta" },
       { name: "description", content: "A modern, premium landing page for Seven Soccer Club, showcasing its elite football academy and professional sports brand." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
+      { property: "og:title", content: "Seven Soccer Club · Cúcuta" },
       { property: "og:description", content: "A modern, premium landing page for Seven Soccer Club, showcasing its elite football academy and professional sports brand." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
+      { name: "twitter:title", content: "Seven Soccer Club · Cúcuta" },
       { name: "twitter:description", content: "A modern, premium landing page for Seven Soccer Club, showcasing its elite football academy and professional sports brand." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/889b42d9-e6f1-46ee-a5d7-f16928bd4cad/id-preview-77de4145--5ca558cf-acb1-4e32-8227-25ed8b00ffa0.lovable.app-1779854732724.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/889b42d9-e6f1-46ee-a5d7-f16928bd4cad/id-preview-77de4145--5ca558cf-acb1-4e32-8227-25ed8b00ffa0.lovable.app-1779854732724.png" },
     ],
     links: [
       {

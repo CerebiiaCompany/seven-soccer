@@ -29,6 +29,7 @@ export const Route = createFileRoute("/")({
           "Club deportivo profesional Partner Coerver Coaching. Formación, competencia y alto rendimiento.",
       },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
